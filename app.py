@@ -8,8 +8,8 @@ warnings.filterwarnings('ignore')
 app = Flask(__name__)
 
 # Load model and scaler
-model = pickle.load(open("F:/Dployment/p3d/wine_quality_model.pkl", "rb"))
-scaler = pickle.load(open("F:/Dployment/p3d/wine_quality_scaler.pkl", "rb"))
+model = pickle.load(open("wine_quality_model.pkl", "rb"))
+scaler = pickle.load(open("wine_quality_scaler.pkl", "rb"))
 
 # Mapping function
 def pred(value):
@@ -21,7 +21,6 @@ def pred(value):
         return 'Average'
     else:
         return 'Poor'
-
 
 # Home route
 @app.route('/')
