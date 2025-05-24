@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <h1>Wine Prediction</h1>
+    </head>
+    <body>
+        <from action="/predict", method="post">
+            <div>
+                <label for="flavanoids">Flavanoids</label>
+                <input type="number" placeholder="Input the Value of Flavanoids" name="flavanoids" id="flavanoids" min="0.3" max="5.1" step="0.01" style="width: 250px;" required>
+            </div><br>
+            <div>
+                <label for="color_intensity">Color Intensity</label>
+                <input type="number" placeholder="Input the Value of color_intensity" name="color_intensity" id="color_intensity" min="1.2" max="13.00" step="0.01" style="width: 250px;" required>
+            </div><br>
+            <div>
+                <label for="proline">Proline</label>
+                <input type="number" placeholder="Input the Value of proline" name="proline" id="proline" min="278.0" max="1680.0" step="0.5" style="width: 250px;" required>
+            </div><br>
+            <div>
+                <label for="ash">Ash</label>
+                <input type="number" placeholder="Input the Value of ash" name="ash" id="ash" min="1.3" max="3.3" step="0.01" style="width: 250px;" required>
+            </div><br>
+            <div>
+                <label for="alcohol">Alcohol</label>
+                <input type="number" placeholder="Input the Value of alcohol" name="alcohol" id="alcohol" min="11.00" max="15.00" step="0.01" style="width: 250px;" required>
+            </div><br>
+
+            <input type="submit" value="Predict">
+        </from><br>
+
+        {{ prediction_text }}
+    </body>
+
+</html>
